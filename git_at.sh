@@ -1,17 +1,16 @@
 #!/bin/bash
-#: Title        : docke_rat
-#: Date         : 14.08.2015
+#: Title        : git_at
+#: Date         : 20.11.2015
 #: Author       : "Evgeny Shmarnev" <shmarnev@gmail.com>
-#: Version      : 1.1
-#: Description  : docke_rat was created for automate process of docker testing
-#: Options      : `docker --version`
+#: Version      : 0.1
+#: Description  : git_at was created for automate process of git testing
+#: Options      : none
 ############################################
 # There are five important things:
 # 1) you need to be a root to run this script;
-# 2) this script accepts one argument  - version of the docker package (e.g. `docker --version` command)
-# 3) this script is for basic testing only!;
-# 4) you can find all your results in the .log file (see $LOG variable);
-# 5) have a lot of fun!
+# 2) this script is for basic testing only!;
+# 3) you can find all your results in the .log file (see $LOG variable);
+# 4) have a lot of fun!
 
 ERRORS=0
 
