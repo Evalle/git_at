@@ -35,12 +35,11 @@ echo "git testing on '$HOSTNAME' host" > $LOG
 echo "" >> $LOG
 
 echo "" >> $LOG
-echo "$HOSTNAME:~ # systemctl start docker" >> $LOG
-systemctl start docker >> $LOG
-echo "test #1 Trying to start Docker on your system..."
+echo "$HOSTNAME:~ # git clone https://github.com/Evalle/pbp && cd pbp " >> $LOG
+git clone https://github.com/Evalle/pbp && cd pbp >> $LOG
+echo "test #1 Trying to clone repo"
 check
 
-sleep 2
 echo "" >> $LOG
 echo "$HOSTNAME:~ # systemctl status docker" >> $LOG
 systemctl status docker >> $LOG
@@ -123,11 +122,3 @@ echo "One (or more) tests is FAILED, please check '$LOG' for additional informat
     fi
 
 echo "" 
-
-echo "Do you wish to destory all Docker images and containers on your system? (Please choose  1 - for Yes, and 2 - for No)"
-select yn in "Yes" "No"; do
-    case $yn in 
-        Yes ) echo ""; echo "Deleting your containers: "; echo ""; docker rm -f $(docker ps -a -q) && docker rmi $(docker images -q) &> /dev/null; break;;
-        No  ) exit;;
-    esac
-done
