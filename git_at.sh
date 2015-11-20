@@ -15,7 +15,6 @@
 ERRORS=0
 
 #docker version variable:
-VERSION="$(docker --version)"
 
 LOG=$(date +"%Y%m%d%H%M".log)
 
@@ -29,19 +28,10 @@ check() {
     fi
 }
 
-check_version() {
-    if [ "$1" == "${VERSION}" ]; then
-        echo "PASSED"
-    else
-        echo "FAILED"
-        ERRORS=$[$ERRORS+1]     
-    fi
-}
- 
 
-echo "dockerat.sh is now testing Docker on your system, you can find all results in '$LOG' file. Please, be patient..."
+echo "gitat.sh is now testing git on your system, you can find all results in '$LOG' file. Please, be patient..."
 
-echo "Docker testing on '$HOSTNAME' host" > $LOG
+echo "git testing on '$HOSTNAME' host" > $LOG
 echo "" >> $LOG
 
 echo "" >> $LOG
