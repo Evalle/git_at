@@ -6,7 +6,7 @@
 #: Description  : git_at was created for automate process of git testing
 #: Options      : none
 ############################################
-# There are five important things:
+# There are four important things:
 # 1) you need to be a root to run this script;
 # 2) this script is for basic testing only!;
 # 3) you can find all your results in the .log file (see $LOG variable);
