@@ -52,9 +52,9 @@ echo "test #3 Check git status..."
 check
 
 echo "" >> $LOG
-echo "$HOSTNAME:~ # git status" >> $LOG
-git status >> $LOG
-echo "test #2 Check git status..."
+echo "$HOSTNAME:~ # git diff" >> $LOG
+git diff >> $LOG
+echo "test #4 Check git diff..."
 check
 
 echo ""
