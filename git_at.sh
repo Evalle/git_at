@@ -57,6 +57,13 @@ git diff >> $LOG
 echo "test #4 Check git diff..."
 check
 
+echo "" >> $LOG
+echo "$HOSTNAME:~ # echo 'new file' > newfile.txt" >> $LOG
+echo 'new file' > newfile.txt >> $LOG
+echo "test #5 create new file"
+check
+
+
 echo ""
 if [ $ERRORS -eq 0 ]; then
 echo "All Tests are PASSED, check your results in '$LOG' file"
