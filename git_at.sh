@@ -63,6 +63,11 @@ echo 'new file' > newfile.txt >> $LOG
 echo "test #5 create new file"
 check
 
+echo "" >> $LOG
+echo "$HOSTNAME:~ # git add newfile.txt" >> $LOG
+git add newfile.txt >> $LOG
+echo "test #5 create new file"
+check
 
 echo ""
 if [ $ERRORS -eq 0 ]; then
