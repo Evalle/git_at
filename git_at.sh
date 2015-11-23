@@ -69,6 +69,14 @@ git add newfile.txt >> $LOG
 echo "test #5 create new file"
 check
 
+echo "" >> $LOG
+echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> $LOG
+git commit -m 'add newfile.txt' >> $LOG
+echo "test #5 create new file"
+check
+
+
+
 echo ""
 if [ $ERRORS -eq 0 ]; then
 echo "All Tests are PASSED, check your results in '$LOG' file"
