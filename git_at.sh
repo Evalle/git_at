@@ -66,13 +66,19 @@ check
 echo "" >> $LOG
 echo "$HOSTNAME:~ # git add newfile.txt" >> $LOG
 git add newfile.txt >> $LOG
-echo "test #5 create new file"
+echo "test #6 add new file to repository"
 check
 
 echo "" >> $LOG
 echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> $LOG
 git commit -m 'add newfile.txt' >> $LOG
-echo "test #5 create new file"
+echo "test #7 commiting  "
+check
+
+echo "" >> $LOG
+echo "$HOSTNAME:~ # git diff" >> $LOG
+git diff >> $LOG
+echo "test #8 check diff"
 check
 
 
