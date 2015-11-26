@@ -16,7 +16,7 @@ ERRORS=0
 
 #docker version variable:
 
-LOG=$(date +"%Y%m%d%H%M".log)
+LOG=$(date +"%Y%-m%-d%-H%M".log)
 
 # function that checking status of your command
 check() {
@@ -45,42 +45,41 @@ git clone https://github.com/Evalle/pbp && cd pbp >> $LOG
 echo "test #2 Trying to clone repo"
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # git status" >> $LOG
-git status >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # git status" >> ../$LOG
+git status >> ../$LOG
 echo "test #3 Check git status..."
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # git diff" >> $LOG
-git diff >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # git diff" >> ../$LOG
+git diff >> ../$LOG
 echo "test #4 Check git diff..."
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # echo 'new file' > newfile.txt" >> $LOG
-echo 'new file' > newfile.txt >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # echo 'new file' > newfile.txt" >> ../$LOG
+echo 'new file' > newfile.txt >> ../$LOG
 echo "test #5 create new file"
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # git add newfile.txt" >> $LOG
-git add newfile.txt >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # git add newfile.txt" >> ../$LOG
+git add newfile.txt >> ../$LOG
 echo "test #6 add new file to repository"
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> $LOG
-git commit -m 'add newfile.txt' >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> ../$LOG
+git commit -m 'add newfile.txt' >> ../$LOG
 echo "test #7 commiting  "
 check
 
-echo "" >> $LOG
-echo "$HOSTNAME:~ # git diff" >> $LOG
-git diff >> $LOG
+echo "" >> ../$LOG
+echo "$HOSTNAME:~ # git diff" >> ../$LOG
+git diff >> ../$LOG
 echo "test #8 check diff"
 check
-
 
 
 echo ""
