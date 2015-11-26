@@ -14,8 +14,6 @@
 
 ERRORS=0
 
-#docker version variable:
-
 LOG=$(date +"%Y%-m%-d%-H%M".log)
 
 # function that checking status of your command
