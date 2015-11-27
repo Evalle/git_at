@@ -1,6 +1,6 @@
 #!/bin/bash
 #: Title        : git_at
-#: Date         : 20.11.2015
+#: Date         : 27.11.2015
 #: Author       : "Evgeny Shmarnev" <shmarnev@gmail.com>
 #: Version      : 0.1
 #: Description  : git_at was created for automate process of git testing
@@ -14,7 +14,7 @@
 
 ERRORS=0
 
-LOG=$(date +"%Y%-m%-d%-H%M".log)
+LOG=$(date +"%Y%m%d%H%M".log)
 
 # function that checking status of your command
 check() {
