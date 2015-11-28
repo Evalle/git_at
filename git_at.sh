@@ -50,41 +50,34 @@ echo "test #3 Check git status..."
 check
 
 echo "" >> ../$LOG
-echo "$HOSTNAME:~ # git diff" >> ../$LOG
-git diff >> ../$LOG
-echo "test #4 Check git diff..."
-check
-
-echo "" >> ../$LOG
 echo "$HOSTNAME:~ # echo 'new file' > newfile.txt" >> ../$LOG
 echo 'new file' > newfile.txt >> ../$LOG
-echo "test #5 create new file"
+echo "test #4 create new file"
 check
 
 echo "" >> ../$LOG
 echo "$HOSTNAME:~ # git add newfile.txt" >> ../$LOG
 git add newfile.txt >> ../$LOG
-echo "test #6 add new file to repository"
-check
-
-echo "" >> ../$LOG
-echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> ../$LOG
-git commit -m 'add newfile.txt' >> ../$LOG
-echo "test #7 commiting  "
+echo "test #5 add new file to repository"
 check
 
 echo "" >> ../$LOG
 echo "$HOSTNAME:~ # git diff" >> ../$LOG
 git diff >> ../$LOG
-echo "test #8 check diff"
+echo "test #6 check diff"
 check
 
+
+echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> ../$LOG
+git commit -m 'add newfile.txt' >> ../$LOG
+echo "test #7 commiting  "
+check
 
 echo ""
 if [ $ERRORS -eq 0 ]; then
 echo "All Tests are PASSED, check your results in '$LOG' file"
     else
-echo "One (or more) tests is FAILED, please check '$LOG' for additional information"
+echo "One (or more) tests are FAILED, please check '$LOG' for additional information"
     fi
 
 echo "" 
