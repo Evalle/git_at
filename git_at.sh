@@ -77,7 +77,7 @@ echo ""
 if [ $ERRORS -eq 0 ]; then
 echo "All Tests are PASSED, check your results in '$LOG' file"
     else
-echo "One (or more) tests are FAILED, please check '$LOG' for additional information"
+echo "One (or more) test is FAILED, please check '$LOG' for additional information"
     fi
 
 echo "" 
