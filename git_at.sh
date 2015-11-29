@@ -50,8 +50,8 @@ echo "test #3 Check git status..."
 check
 
 echo "" >> ../$LOG
-echo "$HOSTNAME:~ # echo 'new file' > newfile.txt" >> ../$LOG
-echo 'new file' > newfile.txt >> ../$LOG
+echo "$HOSTNAME:~ # echo 'some useful info' > newfile.txt" >> ../$LOG
+echo 'some useful info' > newfile.txt >> ../$LOG
 echo "test #4 create new file"
 check
 
@@ -66,7 +66,6 @@ echo "$HOSTNAME:~ # git diff" >> ../$LOG
 git diff >> ../$LOG
 echo "test #6 check diff"
 check
-
 
 echo "$HOSTNAME:~ # git commit -m 'add newfile.txt'" >> ../$LOG
 git commit -m 'add newfile.txt' >> ../$LOG
